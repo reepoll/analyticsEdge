@@ -1,0 +1,477 @@
+nba = read.csv('./data/NBA_train.csv')
+nba_test = read.csv('./data/NBA_test.csv')
+str(nba)
+summary(nba)
+table(nba$Wins, nba$Playoffs)
+table(nba$W, nba$Playoffs)
+nba$PTSdiff = nba$PTS - nba$oppPTS
+plot(nba$PTSdiff, W)
+plot('nba$PTSdiff, 'nba$W')
+plot('nba$PTSdiff', 'nba$W')
+plot('nba$PTSdiff', 'nba$W')
+plot('nba$PTSdiff', 'nba$W')
+plot'nba$PTSdiff, nba$W)
+plot(nba$PTSdiff, nba$W)
+WinsReg = lm(W ~ PTSdiff, data=nba)
+summary(WinReg)
+summary(WinsReg)
+PTSreg = lm(PTS ~ X2PA, X3PL, FTA, AST, ORB, DRB, TOV, STL, BLKL, data=nba)
+PTSreg = lm(PTS ~ X2PA, X3PL, FTA, AST, ORB, DRB, TOV, STL, BLK, data=nba)
+PTSreg = lm(PTS ~ X2PA, X3PL, FTA, AST, ORB, DRB, TOV, STL, BLK, data=nba)
+PTSreg = lm(PTS ~ X2PA, X3PA, FTA, AST, ORB, DRB, TOV, STL, BLK, data=nba)
+PTSreg = lm(PTS ~ X2PA, X3PA, FTA, AST, ORB, DRB, TOV, STL, BLK, data=nba)
+nba$TOV
+PTSreg = lm(PTS ~ X2PA, X3PA, FTA, AST, ORB, DRB, TOV, STL, BLK, data=nba)
+PTSreg = lm(PTS ~ X2PA, X3PA, FTA, AST, ORB, DRB, TOV, STL, BLK, data=nba)
+PTSreg = lm(PTS ~ X2PA, X3PA, FTA, AST, ORB, DRB, STL, BLK, data=nba)
+PTSreg = lm(PTS ~ X2PA, X3PA, FTA, AST, ORB, DRB, TOV, STL, BLK, data=nba)
+PTSreg = lm(PTS ~ X2PA + X3PA + FTA + AST + ORB + DRB + TOV + STL + BLK, data=nba)
+summary(PTSreg)
+PTSreg$residuals
+SSE = sum(PTSreg$residuals^2)
+SSE
+RMSE = sqrt(SSE/nrow(nba))
+RMSE = sqrt(SSE/nrow(nba))
+RMSE
+average(nba$PTS)
+avg(nba$PTS)
+mean(nba$points)
+mean(nba$PTS)
+summary(PTSreg)
+PTSreg = lm(PTS ~ X2PA + X3PA + FTA + AST + ORB + DRB + STL + BLK, data=nba)
+PTSreg3 = lm(PTS ~ X2PA + X3PA + FTA + AST + ORB + STL + BLK, data=nba)
+summary(PTSreg3)
+list.files()
+list.files('./data')
+read.csv('./data/climate_change.csv')
+cc = read.csv('./data/climate_change.csv')
+head(cc)
+summary(cc)
+?subset
+train = subset(cc, Year <= 2006)
+tail(train)
+test = subset(cc, Year > 2006)
+TempModel1 = lm(Temp ~ MEI + CO2 + CH4 + N20 + CFC.11 + CFC.12 + TSI + Aerosols)
+head(cc)
+TempModel1 = lm(Temp ~ MEI + CO2 + CH4 + N20 + CFC.11 + CFC.12 + TSI + Aerosols, data = train)
+TempModel1 = lm(Temp ~ MEI + CO2 + CH4 + N2O + CFC.11 + CFC.12 + TSI + Aerosols, data = train)
+summary(TempModel1)
+cor(cc)
+cor(train)
+TempModel2 = lm(Temp ~ MEI + TSI + Aerosols + N2O)
+TempModel2 = lm(Temp ~ MEI + TSI + Aerosols + N2O, data = train)
+summary(TempModel2)
+step(TempModel1)
+TempModelSteps = step(TempModel1)
+summary(TempModelStep)
+summary(TempModelSteps)
+predict(TempModelSteps)
+PredictModel = predict(TempModelSteps)
+summary(PredictModel)
+PredictModel = predict(TempModelSteps)
+SSE = (sum(PredictModel-TempModelSteps)^2)
+PredictModel
+SSE = (sum(PredictModel-TempModelSteps)^2)
+SSE = sum(PredictModel-TempModelSteps)^2
+PredictModel = predict(TempModelSteps, data=train)
+SSE = sum(PredictModel - TempModelSteps$)
+PredictModel = predict(TempModelSteps, data=train$Temp)
+SSE = sum((PredictModel - TempModelSteps$Temp)^2)
+PredictModel = predict(TempModelSteps, newdata=test)
+SST = sum((mean(train$Temp) - test$Temp))
+R2 = 1 - SSE/SST
+R2
+PredictModel = predict(TempModelSteps, newdata=test)
+SSE = sum((PredictModel - test$Temp)^2)
+SSE
+SSE = sum((PredictModel - test$Temp)^2)
+SST = sum((mean(train$Temp) - test$Temp))
+R2 = 1 - SSE/SST
+R2
+RMSE = 1 - sqrt(SSE/nrow(test))
+RMSE
+R2
+SSE
+SST
+summary(train)
+str(train)
+mean(train$Temp)
+test$Temp
+PredictModel = predict(TempModelSteps, newdata=test)
+SSE = sum((PredictModel - test$Temp)^2)
+SST = sum((mean(train$Temp) - test$Temp)^2)
+R2 = 1 - SSE/SST
+RMSE = 1 - sqrt(SSE/nrow(test))
+R2
+list.files('./data')
+pisa_test = read.csv('./data/pisa2009test.csv')
+pisa = read.csv('./data/pisa2009train.csv')
+summary(pisa)
+head(pisa)
+nrow(pisa)
+summary(pisa)
+tapply(pisa, male = 1, mean)
+?tapply
+tapply(pisa$readingScore, male = 1, mean)
+tapply(pisa$readingScore, male == 1, mean)
+tapply(pisa$readingScore, pisa$male == 1, mean)
+is.na(pisa)
+is.na(pisa)
+is.na(pisa$male)
+?sapply
+sapply(pisa, function(x) sim(is.na(x)))
+sapply(pisa, function(x) sum(is.na(x)))
+pisa = na.omit(pisa)
+pisa_test = na.omit(pisa_test)
+nrow(pisa)
+nrow(pisa_test)
+summary(pisa)
+head(pisa)
+pisa$raceeth = relevel(pisa$raceeth, "White")
+pisa_test$raceeth = relevel(pisa_test$raceeth, "White")
+lmScore = lm(readingScore ~ ., data = pisa)
+summary(lmScore)
+sqrt(0.3251/nrow(pisa))
+RMSE = sqrt(mean((73.81)^2))
+RMSE
+g11 = predict(lmScore, newdata = pisa_test)
+g11
+g11 = predict(lmScore, newdata = pisa_test)
+summary(g11)
+head(g11)
+g11 = predict(lmScore$readingScore, newdata = pisa_test)
+g11 = predict(lmScore, newdata = pisa_test)
+gPred = predict(lmScore, newdata = pisa_test)
+scorePred = predict(lmScore, newdata = pisa_test)
+scorePred
+summary(lmScore)
+scorePred = predict(lmScore, newdata = pisa_test)
+min(scorePred) - max(scorePred)
+SSE = sum((scorePred - pisa_test$readingScore))
+SSE
+SSE = sum((scorePred - pisa_test$readingScore)^2)
+SSE
+scorePred = predict(lmScore, newdata = pisa_test)
+SSE = sum((scorePred - pisa_test$readingScore)^2)
+RMSE = 1 - sqrt(SSE/nrow(pisa_test))
+RMSE
+RMSE
+scorePred = predict(lmScore, newdata = pisa_test)
+SSE = sum((scorePred - pisa_test$readingScore)^2)
+RMSE = 1 - sqrt(SSE/nrow(pisa_test))
+RMSE
+nrow(pisa_test_
+nrow(pisa_test)
+SSE/990
+RMSE = 1 - sqrt(SSE/nrow(test))
+RMSE
+scorePred = predict(lmScore, newdata = pisa_test)
+SSE = sum((scorePred - pisa_test$readingScore)^2)
+RMSE = 1 - sqrt(SSE/nrow(pisa_test))
+RMSE
+RMSE = 1 - sqrt(SSE/nrow(pisa_test))
+RMSE
+SSE = sum((scorePred - pisa_test$readingScore)^2)
+RMSE = 1 - sqrt(SSE/nrow(pisa_test))
+RMSE
+nrow(pisa_test)
+RMSE = sqrt(SSE/nrow(pisa_test))
+RMSE
+lmScore
+lmScore
+pisa_test = read.csv('./data/pisa2009test.csv')
+pisa = read.csv('./data/pisa2009train.csv')
+nrow(pisa)
+tapply(pisa$readingScore, pisa$male == 1, mean)
+#find na's in a data frame
+sapply(pisa, function(x) sum(is.na(x)))
+pisa = na.omit(pisa)
+pisa_test = na.omit(pisa_test)
+pisa$raceeth = relevel(pisa$raceeth, "White")
+pisa_test$raceeth = relevel(pisa_test$raceeth, "White")
+#regression on all variables
+lmScore = lm(readingScore ~ ., data = pisa)
+#calc RMSE
+RMSE = sqrt(mean((73.81)^2))
+scorePred = predict(lmScore, newdata = pisa_test)
+SSE = sum((scorePred - pisa_test$readingScore)^2)
+RMSE = sqrt(SSE/nrow(pisa_test))
+lmScore
+sum(lmScpre)
+sum(lmScore)
+lmScore = lm(readingScore ~ ., data = pisa)
+summary(lmScore)
+mean(pisa$readingScore)
+pisa$readingScore - lmScore
+pisa$readingScore - pisa_test$readingScore
+nrow(pisa$readingScore)
+pisa$readingScore
+pisa_test$readingScore
+pisa$readingScore - pisa_test$readingScore
+mean(pisa$readingScore)
+SSE - SST
+SSE_test = sum((scorePred - pisa_test$readingScore)^2)
+SSE_test
+SSE_test = sum((SST - pisa_test$readingScore)^2)
+SSE_test
+SST = mean(pisa$readingScore)
+SSE_test = sum((SST - pisa_test$readingScore)^2)
+SSE_test
+R2 = 1 - SSE/SST
+R2
+SSE
+SST
+SSE/SST
+SST = mean(pisa$readingScore)
+SSE_test = sum((SST - pisa_test$readingScore)^2)
+R2 = 1 - SSE_test/SST
+R2
+SSElm = sum((SST - lmScore)^2)
+SSElm = sum((SST - scorePred)^2)
+SSElm
+R2 = 1 - SSElm / SST
+R2
+SSElm = sum((SSE_test - scorePred)^2)
+R2 = 1 - SSElm / SST
+R2
+SSElm = sum((scorePred - SSE_test)^2)
+R2 = 1 - SSElm / SST
+R2
+SSElm = sum((scorePred - pisa_test$readingScore^2)
+R2 = 1 - SSElm / SST
+SSElm = sum((scorePred - pisa_test$readingScore^2))
+R2 = 1 - SSElm / SST
+R2
+SSElm = sum((scorePred - pisa_test$readingScore)^2)
+R2 = 1 - SSElm / SST
+R2
+SSElm = sum((pisa_test$readingScore - scorePred)^2)
+R2 = 1 - SSElm / SST
+R2
+SSElm = sum((pisa_test$readingScore - lmScore%readingScore)^2)
+SSElm = sum((pisa_test$readingScore - lmScore$readingScore)^2)
+R2 = 1 - SSElm / SST
+R2
+lmScore$readingScore
+pisa_test = read.csv('./data/pisa2009test.csv')
+pisa = read.csv('./data/pisa2009train.csv')
+nrow(pisa)
+tapply(pisa$readingScore, pisa$male == 1, mean)
+#find na's in a data frame
+sapply(pisa, function(x) sum(is.na(x)))
+pisa = na.omit(pisa)
+pisa_test = na.omit(pisa_test)
+pisa$raceeth = relevel(pisa$raceeth, "White")
+pisa_test$raceeth = relevel(pisa_test$raceeth, "White")
+#regression on all variables
+lmScore = lm(readingScore ~ ., data = pisa)
+#calc RMSE
+RMSE = sqrt(mean((73.81)^2))
+scorePred = predict(lmScore, newdata = pisa_test)
+SSE = sum((scorePred - pisa_test$readingScore)^2)
+RMSE = sqrt(SSE/nrow(pisa_test))
+SST = mean(pisa$readingScore)
+SSE_test = sum((SST - pisa_test$readingScore)^2)
+SSElm = sum((pisa_test$readingScore - lmScore$readingScore)^2)
+R2 = 1 - SSElm / SST
+lmScore
+R2
+lmScore$readingScore
+summary(lmScore)
+SSElm = sum((pisa_test$readingScore - lmScore$readingScore)^2)
+SSElm
+R2 = 1 - SSE / SST
+R2
+lmScore
+str(lmScore)
+summary(lmScore)
+scorePred
+pisa_test
+nrow(pisa)test
+nrow(pisa_test)
+scorePred
+nrow(scorePred)
+scorePred = predict(lmScore, newdata = pisa_test)
+nrow(scorePred)
+meN(scorePred)
+mean(scorePred)
+R2 = 1 - SSE_test / SST
+R2
+SSE_test = sum((SST - pisa_test$readingScore)^2)
+SSE_test
+SST = mean(pisa$readingScore)
+SST
+SSE_model = sum((scorePred - pisa_test$readingScore)^2)
+R2 = 1 - SSE_test / SSE_test
+R2
+SSE_model = sum((scorePred - pisa_test$readingScore)^2)
+R2 = 1 - SSE_model / SSE_test
+R2
+getwd()
+list.files('./data/')
+read.csv('./data/FluTrain.csv')
+flu = read.csv('./data/FluTrain.csv')
+summary(flu)
+head(flu)
+str(flu)
+max(flu$ILI)
+index(max(flu$ILI))
+?index
+?index
+index
+index()
+?match
+match(max(flu$ILI), flu$Week)
+match(max(flu$ILI), flu)
+match(max(flu$ILI), flu)
+match(max(flu$ILI), flu$ILI)
+flu$Week[match(max(flu$ILI), flu$ILI)]
+str(flu)
+flu$Week[match(max(flu$Queries), flu$Quieries)]
+flu$Week[match(max(flu$Queries), flu$Queries)]
+plot(flu$ILI)
+histogram(flu$ILI)
+hist(flu$ILI)
+plot(ln(flu$ILI), flu$Queries)
+plot(log(flu$ILI), flu$Queries)
+FluTrend1 = lm(log(ILI) ~ Queries, data=flu)
+summary(FluTrend1)
+cor(flu$Queries, flu$ILI)
+log(1/.814)
+.814^2
+exp^(-0.5*.814)
+exp(-0.5*.814)
+?exp
+exp(3)
+exp(2)
+x = cor(flu$Queries ~ flu$ILI)
+x = cor(flu$Queries, flu$ILI)
+log(1/x)
+exp(-0.5*x)
+log(1/x)
+x^2
+x^2
+x
+.7-9^2
+.709^2
+fluTest = read.csv('./data/FluTest.csv')
+PredTest1 = exp(predict(FluTrend1, newdata = FluTest))
+PredTest1 = exp(predict(FluTrend1, newdata = fluTest))
+?which
+head(fluTest)
+which(fluTest$Week == '*2012-03-11*')
+fluTest
+which(fluTest$Week == '2012-03-11')
+PredTest1
+which(FluTest$Week == "2012-03-11 - 2012-03-17")
+which(fluTest$Week == "2012-03-11 - 2012-03-17")
+(fluTest[11]-PredTest1[11])/fluTest[11]
+fluTest[11]
+(fluTest$ILI[11]-PredTest1[11])/fluTest$ILI[11]
+fluTest$ILI - PredTest1
+RMS = sqrt(mean(fluTest$ILI - PredTest1)^2)
+RMS
+RMS = sqrt(mean(fluTest$ILI - PredTest1)^2)
+RMS
+RMS = sqrt(mean((fluTest$ILI - PredTest1))^2)
+RMS
+RMS = sqrt(mean((fluTest$ILI - PredTest1)^2))
+RMS
+RMS = sqrt(SSE/nrow(fluTest))
+RMS
+SSE
+nrow(fluTest)
+SSE = sum((fluTest$ILI - PredTest1)^2)
+RMS = sqrt(SSE/nrow(fluTest))
+RMS
+install.packages('zoo')
+library(zoo)
+ILILag2 = lag(zoo(flu$ILI), -2, na.pad=TRUE)
+fluTrain$ILILag2 = coredata(ILILag2)
+flu$ILILag2 = coredata(ILILag2)
+?lag
+?coredata
+head(flu)
+sapply(flu$ILILag2, function(x) sum(is.na(x)))
+sapply(flu, function(x) sum(is.na(x)))
+summary(flu$ILILag2)
+plot(log(flu$ILILag2), log(flu$ILI))
+FluTrend2 = lm(log(ILI) ~ log(ILILag2) + Queries, data = flu)
+summary(FluTrend2)
+#add new lag data to test
+ILILag2 = lag(zoo(fluTest$ILI), -2, na.pad=TRUE)
+fluTest$ILILag2 = coredata(ILILag2)
+sapply(fluTest, function(x) sum(is.na(x)))
+fluTest
+fluTest$ILILag2[0] = flu$ILI[-2]
+fluTest$ILILag2[1] = flu$ILI[-1]
+fluTest$ILILag2[0]
+fluTest$ILILag2[1]
+flu$ILI[-1]
+fluTest
+tail(flu)
+fluTest$ILILag2[1] = flu$ILI[-1]
+fluTest$ILILag2[0] = flu$ILI[-2]
+flu$ILI[-1]
+fluTest$ILILag2[1]
+flu$ILI[-1]
+flu$ILI[1]
+flu$ILI[-0]
+flu$ILI[-1]
+flu[-1]
+nrow(flu)
+fluTest$ILILag2[1] = flu$ILI[417]
+head(fluTest)
+head(fluTest)
+tail(flu)
+fluTest$ILILag2[0] = flu$ILI[416]
+fluTest$ILILag2[1] = flu$ILI[417]
+head(fluTest)
+fluTest$ILILag2[1] = flu$ILI[416]
+fluTest$ILILag2[2] = flu$ILI[417]
+head(fluTest)
+PredTest2 = exp(predict(FluTrend2, newdata = fluTest))
+plot(PredTest2)
+SSE = sum((PredTest2 - fluTest$ILI)^2)
+RMS = sqrt(SSE/nrow(fluTest))
+RMS
+log(-1.5+3*1+5*-.5)
+e^(-1.5+3*1+5*-.5)
+euler
+e?
+?e
+exp(-1.5+3*1+5*-.5)
+1- exp(-1.5+3*1+5*-.5)
+1/(1+ (1- exp(-1.5+3*1+5*-.5))
+)
+1/(1-exp(-1.5+3*1+5*-.5))
+1/(1+exp(-1.5+3*1+5*-.5))
+?exp
+1/(1+exp(-1.5+3*1+5*-.5)-1)
+getwd()
+quality = read.csv'./data/quality.csv'
+quality = read.csv('./data/quality.csv')
+quality = read.csv('./data/quality.csv')
+str(quality)
+table(PoorCare)
+table(quality$PoorCare)
+install.packages("caTools")
+library(caTools)
+library(caTools)
+set.seed(88)
+split = sample.split(quality$PoorCare, SplitRatio = 0.75)
+split
+train = subset(quality, split == TRUE)
+test = subset(quality, split == FALSE)
+qualLog = glm(PoorCase ~ OfficeVisits + Narcotics, data=train, familiy=binomial)
+qualLog = glm(PoorCare ~ OfficeVisits + Narcotics, data=train, familiy=binomial)
+qualLog = glm(PoorCare ~ OfficeVisits + Narcotics, data=train, familiy=binomial)
+summary(qualLog)
+qualLog = glm(PoorCare ~ OfficeVisits + Narcotics, data=train, family=binomial)
+summary(qualLog)
+source('~/.active-rstudio-document', echo=TRUE)
+summary(predictTrain)
+tapply(predictTrain, qualityTrain$PoorCare, mean)
+tapply(predictTrain, train$PoorCare, mean)
+qualLog2 = glm(PoorCare ~ StartedOnCombination + ProviderCount, data=train, family=binomial)
+summary(qualLog2)
