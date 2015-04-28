@@ -20,5 +20,6 @@ emailsSparse = as.data.frame(as.matrix(spdtm))
 sort(colSums(emailsSparse))
 ##2.4
 emailsSparse$spam = emails$spam
-hamSparse = subset(emailsSparse, spam=0)
+hamSparse = subset(emailsSparse, spam==0)
 sort(colSums(hamSparse))
+emailsSparse1000 = subset(emailsSparse, colSums(emailsSparse) > 1000)
