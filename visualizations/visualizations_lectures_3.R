@@ -12,3 +12,15 @@ ggplot(mit, aes(x=Region, y=PercentOfIntl)) +
         geom_text(aes(label=PercentOfIntl), vjust=-0.4) + 
         ylab("Percent of International Students") +
         theme(axis.title.x = element_blank(), axis.text.x = element_text(angle = 45, hjust = 1))
+
+#stacking or "melting data"
+house = read.csv('../data/households.csv')
+library(reshape2)
+library(ggplot2)
+melt(house, id="Year")
+ggplot(melt(house, id="Year"), aes(x=Year, y=value, color=variable)) +
+               geom_line(size=2) + 
+               geom_point(size=5, type=17) +
+               ylab("Percentage of Households")
+        
+
